@@ -86,7 +86,8 @@ static struct cpufreq_frequency_table freq_table[] = {
 	{ 3, 768000 },
 	{ 4, 806400 },
 	{ 5, 960000 },
-	{ 6, CPUFREQ_TABLE_END },
+	{ 6, 1024000 },
+	{ 7, CPUFREQ_TABLE_END },
 };
 
 /* Use negative numbers for sources that can't be enabled/disabled */
@@ -107,6 +108,7 @@ static struct clkctl_acpu_speed acpu_freq_tbl[] = {
 	* is updated to 1024MHz at runtime for QSD8x55. */
 	{ 806400, PLL_2,    3, 0,  192000, 1050, VDD_RAW(1050) },
 	{ 960000, PLL_2,    3, 0,  192000, 1050, VDD_RAW(1050) },
+	{ 1024000, PLL_2,    3, 0,  192000, 1100, VDD_RAW(1100) },
 	{ 0 }
 };
 static unsigned long max_axi_rate;
